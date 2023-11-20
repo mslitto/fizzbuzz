@@ -1,0 +1,267 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ^^^ this ist to kill all presets in css */
+
+/* my css dump*/
+
+@font-face {
+  font-family: "Misto";
+  src: url('assets/Misto.woff') format("truetype");
+}
+
+
+
+
+body{
+  background-color: #e5e5f7;
+  opacity: 1;
+  height: 100vh;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image:  linear-gradient(#444df748 1px, transparent 1px), linear-gradient(to right, #444df748 1px, #e5e5f7 1px);
+  background-size: 50px 20px;
+  background-color: pink;
+}
+p.quest:nth-child(4) {
+  border: 2px dotted red;
+}
+
+.container {
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  position: relative;
+  text-align: center;
+}
+
+button{
+  padding: 0.5em;
+  margin: 0.5em auto;
+  width: 200px;
+  background-color: rgba(255, 194, 204, 0.4);
+  color: black;
+  font-weight: 500;
+  transition: width 1s;
+  text-align: center;
+  display: block;
+  border-radius: 30px;
+}
+
+button:hover {
+  width: 220px;
+  background-color: black;
+  color: pink;
+  font-weight:800;
+}
+#result{
+  font-size: 10em;
+  margin-bottom: 10px;
+  font-family: "Misto", Verdana, Tahoma;
+}
+#title{
+  font-size: 10em;
+  margin-bottom: 10px;
+  color: rgb(248, 125, 146);
+  font-family: "Misto", Verdana, Tahoma;
+}
+
+/* The animation code */
+@keyframes img1 {
+  0%   {opacity:0;}
+  20% {opacity: 1; transform: translate( -50%, -50%) rotateY(180deg);}
+  60% {opacity: 1;}
+  100% {opacity:0;  animation-timing-function: ease;}
+}
+
+@keyframes img2 {
+  0%   {opacity:0;}
+  20% {opacity: 1; transform: translate( -50%, -50%) rotateY(-180deg);}
+  60% {opacity: 1;}
+  100% {opacity:0;  animation-timing-function: ease;}
+}
+
+
+@keyframes img3 {
+  0%   {opacity:0;}
+  20% {opacity: 1; width: 100%; height: 100%;}
+  60% {opacity: 1; width: 100%; height: 100%;}
+  100% {opacity:0;  animation-timing-function: ease;}
+}
+
+@keyframes font {
+  0% {color:pink; border-radius: 0px;}
+  20% { color:fuchsia; text-shadow: 10px 10px #01d1f1;}
+  60% {color:fuchsia; text-shadow: 10px 10px #01d1f1;}
+  100% {color:pink; border-radius: 0px;}
+}
+
+.animated {
+  opacity: 0;
+  position: fixed;
+  display: block;
+  margin: 0 auto;
+  /* z-index: -2; */
+  left: 100%;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* The element to apply the animation to */
+.animate1 {
+  animation-name: img1;
+  animation-duration: 1000ms;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+
+.animate2 {
+  animation-name: img2;
+  animation-duration: 1000ms;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+
+.animate3 {
+  animation-name: img3;
+  animation-duration: 1000ms;
+  left: 50%;
+  top:50%;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.animateFont {
+  animation-name: font;
+  color: black; 
+  animation-duration: 1000ms;
+}
